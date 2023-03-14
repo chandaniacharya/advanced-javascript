@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <p id="innerhtml">hii divya</p>
+ <p id="innertext">hii chandani</p>
+ <script>
+    document.getElementById('innerhtml').innerHTML="<h1>hello diya</h1>";
+    document.getElementById('innertext').innerText="<h1>hello chand</h1>";
+ </script>
+
+
+<hr>
+<br>
+<br>
+
+<div class="color">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloribus praesentium, architecto placeat nulla laborum repellat nam maiores voluptatibus voluptatum quia exercitationem accusamus officia repudiandae perspiciatis doloremque nihil natus porro.</p><br><br>
+</div>
+
+<div class="color">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloribus praesentium, architecto placeat nulla laborum repellat nam maiores voluptatibus voluptatum quia exercitationem accusamus officia repudiandae perspiciatis doloremque nihil natus porro.</p><br><br>
+</div>
+
+<div class="color">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloribus praesentium, architecto placeat nulla laborum repellat nam maiores voluptatibus voluptatum quia exercitationem accusamus officia repudiandae perspiciatis doloremque nihil natus porro.</p><br><br>
+</div>
+
+<div class="color">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloribus praesentium, architecto placeat nulla laborum repellat nam maiores voluptatibus voluptatum quia exercitationem accusamus officia repudiandae perspiciatis doloremque nihil natus porro.</p><br><br>
+</div>
+
+<button onclick="myfunction()">try me</button>
+<button onclick="myfunction1()">try me</button>
+
+<script>
+    function myfunction() {
+        var x = document.getElementsByClassName("color");
+        x[0].style.backgroundColor = "skyblue";
+        x[1].style.backgroundColor = "pink";
+    }
+
+    function myfunction1() {
+        var x = document.getElementsByClassName("color");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.backgroundColor = "pink";
+        }
+    }
+</script>
+<br>
+<br>
+<hr>
+
+
+
+<script>
+    function countpara()
+    {
+        var totalpara=document.getElementsByTagName("h2")
+        alert("total ptags are: " + totalpara.length)
+    }
+</script>
+
+<h2>hiii chandani</h2>
+<button onclick="countpara()">count h2</button>
+
+<hr>
+<br>
+<br>
+
+<script type="text/javascript">
+    function showcommentform()
+    {
+        var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea>  <br><input type='submit' value='Post Comment'>";  
+        document.getElementById('mylocation').innerHTML=data;
+    }
+</script>
+
+<form name="myform">
+    <input type="button" value="button" onclick="showcommentform()">
+    <div id="mylocation"></div>
+
+</form>
+
+
+
+
+
+
+</body>
+</html>

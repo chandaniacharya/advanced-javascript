@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*first method
+emp={id:102,name:"Shyam Kumar",salary:40000};
+
+document.write(emp.id+" "+emp.name+" "+emp.salary);
+
+emp1=[{id:102,name:"Shyam Kumar",salary:40000},{id:102,name:"Shyam Kumar",salary:40000},{id:102,name:"Shyam Kumar",salary:40000},]
+  
+document.write(emp1[0].id+" "+emp1[0].name+" "+emp1[0].salary);  
+*/
+
+      /*second method
+var emp=new Object();  
+emp.id=101;  
+emp.name="Ravi Malik";  
+emp.salary=50000;  
+document.write(emp.id+" "+emp.name+" "+emp.salary);  
+*/
+
+      //thirs method
+      function emp(id, name, salary) {
+        this.userid = id;
+        this.username = name;
+        this.usersalary = salary;
+      }
+      obj = new emp(103, "Vimal Jaiswal", 30000);
+
+      document.write(obj.userid + " " + obj.username + " " + obj.usersalary);
+    </script>
+  </body>
+</html>

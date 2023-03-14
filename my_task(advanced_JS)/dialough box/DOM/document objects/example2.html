@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This document was last modified <span id="demo2"></span>.</p>
+    <script>
+      document.getElementById("demo2").innerHTML = document.lastModified;
+    </script>
+
+    <br />
+
+    <p id="demo3"></p>
+
+    <script>
+      document.getElementById("demo3").innerHTML =
+        "The title of this document is: " + document.title;
+    </script>
+
+
+<br>
+<br>
+<p>The full URL of this document is:<span id="demo4"></span> </p>
+<script>
+    document.getElementById("demo4").innerHTML=document.URL;
+
+</script>
+
+
+<br>
+<br>
+<button onclick="myfunction()">fun with me</button>
+<script>
+    function myfunction()
+    {
+        document.open("text/html","replace")
+        document.write("<h3>learning about the html dom is fun</h>")
+            document.close();
+    }
+    </script>
+
+
+<br>
+<br>
+
+
+
+<script>
+    function getelements() {
+        var x = document.getElementsByName("x");
+
+        if (x[0].checked == true) {
+            document.getElementById("demo5").innerHTML = 'cat';
+        } else if (x[1].checked == true) {
+            document.getElementById("demo5").innerHTML = 'dog';
+        } else {
+            document.getElementById("demo5").innerHTML = 'not selected';
+        }
+    }
+</script>
+<p>
+cat: <input type="radio" name="x" value="cat">
+dog: <input type="radio" name="x" value="dog">
+<input type="button" onclick="getelements()" value="How many elements named x?">
+<p id="demo5"></p>
+</p>
+
+
+
+<br>
+<br>
+
+<!-- forms -->
+ 
+<p id="demo9"></p>
+<p id="demo10"></p>
+<form name="myform" action="" onsubmit="return getforms()">
+
+ name: <input type="text" name="abc">
+<br>
+<br>
+ email: <input type="text" name="xyz">
+<br>
+<br>
+<input type="submit" name="submit">
+
+</form>
+
+<script>
+  function  getforms()
+  {
+    var abc=document.getforms['myform']['abc'].value;
+    document.getElementById("demo9").innerHTML="name is" + abc;
+
+  
+  var abc=document.getforms['myform']['xyz'].value;
+    document.getElementById("demo10").innerHTML="name is" + abc;
+  }
+</script>
+
+
+<br>
+<br>
+<!-- image -->
+
+<img  
+id="img1"
+src="https://images.wallpaperscraft.com/image/single/motivation_phrase_notebook_178598_1280x1024.jpg" alt=""width="486" height="266">
+
+<img  
+id="img1"
+src="https://images.wallpaperscraft.com/image/single/motivation_phrase_notebook_178598_1280x1024.jpg" alt=""width="362" height="155">
+<p id="demo11"></p>
+<p id="demo12"></p>
+
+
+<script>
+  document.getElementById("demo11").innerHTML =document.images.length;
+document.getElementById("demo12").innerHTML =document.images[0].id;
+</script>
+<br>
+<br>
+
+<!-- onmouseover & out change chnage the bg img -->
+
+<script>
+  function bgChange(bg) {
+    document.body.style.background = bg;
+  }
+  </script>
+  
+  
+  <table style="height: 200px; width: 15%;">
+  
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color: black;"
+    >
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color: grey;"
+    >
+    </td>
+  
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color: silver;"
+    >
+  
+    </td>
+  
+  </table>
+  <br>
+  <br>
+
+  <!-- button disable -->
+
+  <form>
+<input type="button" id="btn01" value="ok">
+  </form>
+<button onclick="disableelement()">disable</button>
+
+<script>
+  function disableelement()
+  {
+    document.getElementById("btn01").disa
+  }
+</script>
+  
+  </body>
+</html>

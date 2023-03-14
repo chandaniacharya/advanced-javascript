@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" action="submit-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+      
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password"><br>
+      
+        <button type="submit">Submit</button>
+      </form>
+<script>
+    const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+
+form.addEventListener('submit', (event) => {
+  let isValid = true;
+
+  // Validate name input
+  if (nameInput.value === '') {
+    alert('Name is required');
+    isValid = false;
+  }
+
+  // Validate email input
+  if (emailInput.value === '') {
+    alert('Email is required');
+    isValid = false;
+  } else if (!isValidEmail(emailInput.value)) {
+    alert('Invalid email format');
+    isValid = false;
+  }
+
+  // Validate password input
+  if (passwordInput.value === '') {
+    alert('Password is required');
+    isValid = false;
+  } else if (passwordInput.value.length < 6) {
+    alert('Password must be at least 6 characters');
+    isValid = false;
+  }
+
+  // Validate confirm password input
+  if (confirmPasswordInput.value === '')
+   {
+    alert('Confirm');
+   }
+
+</script>      
+</body>
+</html>
